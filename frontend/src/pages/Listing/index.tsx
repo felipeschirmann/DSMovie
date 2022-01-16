@@ -6,7 +6,7 @@ import { MoviePage } from "types/movie";
 import { BASE_URL } from "utils/requests";
 
 function Listing() {
-  const [pageNumber, setPgeNumber] = useState(0);
+  const [pageNumber, setPageNumber] = useState(0);
 
   const [page, setPage] = useState<MoviePage>({
     content: [],
@@ -30,8 +30,8 @@ function Listing() {
   }, [pageNumber]);
 
   const handlePageChange = (newPageNumber: number) => {
-    setPgeNumber(newPageNumber);
-  };
+    setPageNumber(newPageNumber);
+  }
 
   return (
     <>
