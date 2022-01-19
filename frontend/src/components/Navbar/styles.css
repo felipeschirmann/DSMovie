@@ -1,33 +1,43 @@
 header {
-    height: 60px;
-    background-color:  #4D41C0;
-    display: flex;
-    align-items: center;
+  height: 60px;
+  background-color: #4d41c0;
+  display: flex;
+  align-items: center;
 }
 
 .dsmovie-nav-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
 }
 
 .dsmovie-nav-content a {
-    color: #fff;
+  color: #fff;
 }
 
 .dsmovie-nav-content h1 {
-    font-size: 24px;
-    margin: 0;
-    font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
 }
 
 .dsmovie-contact-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .dsmovie-contact-link {
-    margin: 0 0 0 10px;
-    font-size: 12px;
+  margin: 0 0 0 10px;
+  font-size: 12px;
+}
+
+.root-link {
+  color: white;
+  text-decoration: none;
+}
+
+.root-link:hover {
+  color: white;
+  text-decoration: none;
 }
