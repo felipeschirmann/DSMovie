@@ -2,10 +2,10 @@
 
 Model: 
 </br>
-<img src="https://raw.githubusercontent.com/felipeschirmann/DSVendas/main/assets/sds3-mc.png" alt="model"/>
+<img src="https://raw.githubusercontent.com/felipeschirmann/DSMovie/main/assets/dsmovie-dominio.png" alt="model"/>
 
 Preview
-<img src="https://raw.githubusercontent.com/felipeschirmann/DSVendas/main/assets/felipeschirmann-sds5.png" alt="Preview"/>
+<img src="https://raw.githubusercontent.com/felipeschirmann/DSMovie/main/assets/felipeschirmann-sds6.png" alt="Preview"/>
 
 ### Backend in ->  https://felipeschirmann-dsmovie.herokuapp.com/
 
