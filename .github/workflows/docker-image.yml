@@ -7,9 +7,7 @@ on:
     branches: [ "main" ]
   paths:
       - 'backend/**'
-  paths-ignore:
-      - 'frontend/**'
-      
+
 jobs:
 
   build:
