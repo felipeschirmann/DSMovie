@@ -31,5 +31,5 @@ jobs:
     - name: Publish to Docker Hub
       uses: docker/build-push-action@v3
       with:
-       repository: felipeschirmann/ds-movie
-       tags: ${{github.run_number}},latest
+        push: true
+        tags: felipeschirmann/ds-movie:${{github.run_number}},felipeschirmann/ds-movie:latest
