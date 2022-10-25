@@ -3,12 +3,8 @@ name: Docker Image CI
 on:
   push:
     branches: [ "main" ]
-    paths-ignore:
-      - 'frontend/**'
   pull_request:
     branches: [ "main" ]
-    paths-ignore:
-      - 'frontend/**'
 
 jobs:
   build:
@@ -22,10 +18,12 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: 18
+
+    - name: Move files backend to .
+    - run: mv -f backend/* .
+
     - name: Build with Maven
-      run: |- 
-        cd backend
-        mvn clean install
+      run: mvn clean install
 
     - name: Login to Docker Hub
       uses: docker/login-action@v2
