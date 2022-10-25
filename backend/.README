@@ -1,3 +1,4 @@
+### Create the artifact
 [sh]
 ./mvnw clean install
 ./mvnw package && java -jar target/dsmovie-0.0.1-SNAPSHOT.jar
