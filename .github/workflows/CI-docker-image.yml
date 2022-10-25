@@ -36,7 +36,5 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        context: .
-        file: ./Dockerfile
         push: true
         tags: felipeschirmann/ds-movie:${{github.run_number}},felipeschirmann/ds-movie:latest        
