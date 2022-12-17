@@ -1,5 +1,6 @@
 # Project-sds6 Week Spring React (DSMovie)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=felipeschirmann_projeto-sds5&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=felipeschirmann_projeto-sds5)
+[![Docker Image CI](https://github.com/felipeschirmann/DSMovie/actions/workflows/CI-docker-image.yml/badge.svg)](https://github.com/felipeschirmann/DSMovie/actions/workflows/CI-docker-image.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/10932ea4-d389-464f-8fc0-c646c463d178/deploy-status)](https://app.netlify.com/sites/felipeschirmann-dsmovie/deploys)
 
 Model: 
