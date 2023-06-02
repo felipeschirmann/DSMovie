@@ -63,4 +63,4 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: felipeschirmann/ds-vendas:${{github.run_number}},felipeschirmann/ds-vendas:latest
+          tags: felipeschirmann/ds-movie:${{github.run_number}},felipeschirmann/ds-movie:latest
