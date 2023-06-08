@@ -1,4 +1,4 @@
-name: ci
+name: CI Docker Hub backend
 
 on:
   workflow_dispatch:
