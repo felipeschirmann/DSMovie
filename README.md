@@ -1,4 +1,4 @@
-# Project-sds6 Week Spring React (DSMovie)
+# Project DSMovie
 
 ## About this Project
 Film rating project developed in the Spring React Week of the <a href="https://devsuperior.com.br/">Devsuperior</a> programming school (https://github.com/devsuperior/sds6)
