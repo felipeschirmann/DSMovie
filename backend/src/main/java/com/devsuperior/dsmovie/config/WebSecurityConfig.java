@@ -17,30 +17,33 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig {
-
+public class WebSecurityConfig {
 	@Autowired
 	private Environment env;
-
+	
 	@Bean
-	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
-
-			http.authorizeHttpRequests((requests) -> requests.requestMatchers(toH2Console()).permitAll() // <-
-			).csrf((protection) -> protection.ignoringRequestMatchers(toH2Console()) // <-
-			);
-		}
-		http.authorizeHttpRequests(
-				(requests) -> requests.requestMatchers("/**").permitAll().anyRequest().authenticated())
-				.headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
-				.cors((cors) -> cors.configurationSource(profileConfigurationSource()));
+	public SecurityFilterChain apiFilterChain(HttpSecurity http) throws Exception {
+		http
+			.securityMatcher("/**")
+			.headers(headers -> headers
+					.frameOptions(frameOptions -> frameOptions
+							.sameOrigin()
+					)
+			)
+			.cors((cors) -> cors
+				.configurationSource(configurationSource())
+			)
+			.csrf((csrf) -> csrf
+			.ignoringRequestMatchers(toH2Console()).ignoringRequestMatchers("/**"));
+//			.csrf(AbstractHttpConfigurer::disable);
 		return http.build();
 	}
-
-	CorsConfigurationSource profileConfigurationSource() {
+	
+	CorsConfigurationSource configurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
 		configuration.setAllowedOrigins(Arrays.asList(env.getProperty("cors.allow.frontend")));
-		configuration.setAllowedMethods(Arrays.asList("POST", "GET", "PUT", "DELETE", "OPTIONS"));
+		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS", "HEAD"));
+		configuration.addAllowedHeader("*");
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", configuration);
 		return source;
