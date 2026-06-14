@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Docker-Multi--Platform-cyan?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/SonarCloud-Quality%20Gate-success?style=for-the-badge&logo=sonarcloud&logoColor=white" alt="SonarCloud" />
   <img src="https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-blueviolet?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-  <a href="https://dsmovie-homolog.felipeschirmann.dev.br/actuator/health">
+  <a href="https://dsmovie-homolog.felipeschirmann.dev.br/swagger-ui/index.html">
     <img src="https://img.shields.io/badge/Live%20Demo-Homolog-blue?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Live Demo" />
   </a>
 </div>
@@ -158,6 +158,8 @@ Manage, run, and report on all automated validations:
 
 When running the application locally under the `test` or `dev` profiles:
 
+* **Swagger Interactive UI**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+* **OpenAPI Specs (JSON)**: [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
 * **H2 Database Console**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
   * *JDBC URL*: `jdbc:h2:mem:testdb`
   * *User*: `sa`
