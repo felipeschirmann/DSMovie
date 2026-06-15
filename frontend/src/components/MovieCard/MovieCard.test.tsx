@@ -36,4 +36,16 @@ describe('MovieCard Component', () => {
     expect(linkElement).toBeInTheDocument();
     expect(linkElement).toHaveAttribute('href', '/form/1');
   });
+
+  test('renders movie image with high fetchPriority and eager loading when index < 4', () => {
+    render(
+      <BrowserRouter>
+        <MovieCard movie={mockMovie} index={0} />
+      </BrowserRouter>
+    );
+
+    const imgElement = screen.getByAltText('The Witcher');
+    expect(imgElement).toHaveAttribute('loading', 'eager');
+    expect(imgElement).toHaveAttribute('fetchpriority', 'high');
+  });
 });
