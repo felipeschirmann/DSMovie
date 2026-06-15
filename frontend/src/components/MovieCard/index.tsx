@@ -16,7 +16,7 @@ function MovieCard({ movie, index }: Props) {
         src={movie.image}
         alt={movie.title}
         loading={isAboveFold ? "eager" : "lazy"}
-        {...(isAboveFold ? { fetchPriority: "high" } : {})}
+        {...(isAboveFold ? { fetchpriority: "high" } : {})}
       />
       <div className="dsmovie-card-bottom-container">
         <h3>{movie.title}</h3>
