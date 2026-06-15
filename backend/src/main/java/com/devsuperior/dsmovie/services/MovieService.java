@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.devsuperior.dsmovie.dto.MovieDTO;
 import com.devsuperior.dsmovie.entities.Movie;
 import com.devsuperior.dsmovie.repositories.MovieRepository;
+import com.devsuperior.dsmovie.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class MovieService {
@@ -24,7 +25,7 @@ public class MovieService {
 	
 	@Transactional(readOnly = true)
 	public MovieDTO findById(Long id) {
-		Movie result = repository.findById(id).get();
+		Movie result = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Entity not found"));
 		MovieDTO dto = new MovieDTO(result);
 		return dto;
 	}

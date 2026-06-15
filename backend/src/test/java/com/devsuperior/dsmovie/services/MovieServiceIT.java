@@ -1,6 +1,6 @@
 package com.devsuperior.dsmovie.services;
 
-import java.util.NoSuchElementException;
+import com.devsuperior.dsmovie.services.exceptions.ResourceNotFoundException;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -51,8 +51,8 @@ public class MovieServiceIT {
 	}
 
 	@Test
-	public void findByIdShouldThrowNoSuchElementExceptionWhenIdDoesNotExist() {
-		Assertions.assertThrows(NoSuchElementException.class, () -> {
+	public void findByIdShouldThrowResourceNotFoundExceptionWhenIdDoesNotExist() {
+		Assertions.assertThrows(ResourceNotFoundException.class, () -> {
 			service.findById(nonExistingId);
 		});
 	}

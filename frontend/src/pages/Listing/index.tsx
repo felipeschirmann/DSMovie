@@ -31,6 +31,7 @@ function Listing() {
 
   const handlePageChange = (newPageNumber: number) => {
     setPageNumber(newPageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   return (
@@ -38,9 +39,9 @@ function Listing() {
       <Pagination page={page} onChange={handlePageChange} />
       <div className="container">
         <div className="row">
-          {page.content.map((movie) => (
-            <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3 col-mb-3">
-              <MovieCard movie={movie} />
+          {page.content.map((movie, index) => (
+            <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+              <MovieCard movie={movie} index={index} />
             </div>
           ))}
         </div>

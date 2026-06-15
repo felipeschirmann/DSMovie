@@ -4,15 +4,19 @@ import { Movie } from "types/movie";
 
 type Props = {
   movie: Movie;
+  index?: number;
 };
 
-function MovieCard({ movie }: Props) {
+function MovieCard({ movie, index }: Props) {
+  const isAboveFold = index !== undefined && index < 4;
   return (
     <div>
       <img
         className="dsmovie-movie-card-image"
         src={movie.image}
         alt={movie.title}
+        loading={isAboveFold ? "eager" : "lazy"}
+        {...(isAboveFold ? { fetchPriority: "high" } : {})}
       />
       <div className="dsmovie-card-bottom-container">
         <h3>{movie.title}</h3>
