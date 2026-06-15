@@ -39,10 +39,11 @@ public class MovieControllerIT {
 	}
 
 	@Test
-	public void findByIdShouldThrowExceptionWhenIdDoesNotExist() throws Exception {
-		org.junit.jupiter.api.Assertions.assertThrows(Exception.class, () -> {
-			mockMvc.perform(get("/movies/999")
-					.accept(MediaType.APPLICATION_JSON));
-		});
+	public void findByIdShouldReturnNotFoundWhenIdDoesNotExist() throws Exception {
+		mockMvc.perform(get("/movies/999")
+				.accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isNotFound())
+				.andExpect(jsonPath("$.error").value("Resource not found"))
+				.andExpect(jsonPath("$.message").value("Entity not found"));
 	}
 }
