@@ -38,10 +38,16 @@ public class WebSecurityConfig {
 //			.csrf(AbstractHttpConfigurer::disable);
 		return http.build();
 	}
-	
 	CorsConfigurationSource configurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
-		configuration.setAllowedOrigins(Arrays.asList(env.getProperty("cors.allow.frontend")));
+		String allowedOrigins = env.getProperty("cors.allow.frontend");
+		if (allowedOrigins != null) {
+			String[] originsArray = allowedOrigins.split(",");
+			for (int i = 0; i < originsArray.length; i++) {
+				originsArray[i] = originsArray[i].trim();
+			}
+			configuration.setAllowedOrigins(Arrays.asList(originsArray));
+		}
 		configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS", "HEAD"));
 		configuration.addAllowedHeader("*");
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();

@@ -54,11 +54,11 @@ function FormCard({ movieId }: Props) {
         <form className="dsmovie-form" onSubmit={handleSubmit}>
           <div className="form-group dsmovie-form-group">
             <label htmlFor="email">Informe seu email</label>
-            <input type="email" className="form-control" id="email" />
+            <input type="email" className="form-control" id="email" name="email" />
           </div>
           <div className="form-group dsmovie-form-group">
             <label htmlFor="score">Informe sua avaliação</label>
-            <select className="form-control" id="score">
+            <select className="form-control" id="score" name="score">
               <option>1</option>
               <option>2</option>
               <option>3</option>
