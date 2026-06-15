@@ -1,43 +1,54 @@
 header {
-  height: 60px;
-  background-color: #4d41c0;
+  height: 65px;
+  background: rgba(11, 15, 25, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
   display: flex;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .dsmovie-nav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
-}
-
-.dsmovie-nav-content a {
-  color: #fff;
+  width: 100%;
 }
 
 .dsmovie-nav-content h1 {
-  font-size: 24px;
+  font-size: 22px;
   margin: 0;
   font-weight: 700;
+  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .dsmovie-contact-container {
   display: flex;
   align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+}
+
+.dsmovie-contact-container:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: var(--color-primary);
+}
+
+.dsmovie-contact-container svg {
+  fill: var(--color-text-main);
+  width: 20px;
+  height: 20px;
 }
 
 .dsmovie-contact-link {
-  margin: 0 0 0 10px;
-  font-size: 12px;
-}
-
-.root-link {
-  color: white;
-  text-decoration: none;
-}
-
-.root-link:hover {
-  color: white;
-  text-decoration: none;
+  margin: 0 0 0 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-main);
 }
