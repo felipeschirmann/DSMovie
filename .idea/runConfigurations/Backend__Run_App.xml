@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Backend: Run App" type="MavenRunConfiguration" factoryName="Maven">
+  <configuration default="false" name="Backend: Run App" type="MavenRunConfiguration" factoryName="Maven" folderName="Backend/Dev">
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings" />
