@@ -18,15 +18,25 @@
 
 ---
 
+## 📊 Pipeline & Quality Badges
+
+| Build Status | Code Quality | Security Status |
+| :--- | :--- | :--- |
+| [![Continuous Integration](https://github.com/felipeschirmann/DSMovie/actions/workflows/ci.yml/badge.svg)](https://github.com/felipeschirmann/DSMovie/actions/workflows/ci.yml) | [![SonarCloud Quality Gate](https://img.shields.io/sonar/quality_gate/felipeschirmann_DSMovie?server=https%3A%2F%2Fsonarcloud.io&logo=sonarcloud)](https://sonarcloud.io/summary/new_code?id=felipeschirmann_DSMovie) | [![SonarCloud Security Rating](https://img.shields.io/sonar/security_rating/felipeschirmann_DSMovie?server=https%3A%2F%2Fsonarcloud.io&logo=sonarcloud)](https://sonarcloud.io/summary/new_code?id=felipeschirmann_DSMovie) |
+| [![Continuous Deployment](https://github.com/felipeschirmann/DSMovie/actions/workflows/cd.yml/badge.svg)](https://github.com/felipeschirmann/DSMovie/actions/workflows/cd.yml) | [![SonarCloud Coverage](https://img.shields.io/sonar/coverage/felipeschirmann_DSMovie?server=https%3A%2F%2Fsonarcloud.io&logo=sonarcloud)](https://sonarcloud.io/summary/new_code?id=felipeschirmann_DSMovie) | [![SonarCloud Vulnerabilities](https://img.shields.io/sonar/vulnerabilities/felipeschirmann_DSMovie?server=https%3A%2F%2Fsonarcloud.io&logo=sonarcloud)](https://sonarcloud.io/summary/new_code?id=felipeschirmann_DSMovie) |
+
+---
+
 ## 📖 Table of Contents
-1. [Key Features & Architecture](#-key-features--architecture)
-2. [Domain Model (UML)](#-domain-model-uml)
-3. [CI/CD Workflow Architecture](#-cicd-workflow-architecture)
-4. [🛠️ Local Development & Quick Start](#%EF%B8%8F-local-development--quick-start)
-5. [🐳 Docker Compose Containers](#-docker-compose-containers)
-6. [🎯 Testing & Verification](#-testing-&--verification)
-7. [🔗 API Documentation & Useful Links](#-api-documentation--useful-links)
-8. [🖼️ Application Preview](#%EF%B8%8F-application-preview)
+1. [📊 Pipeline & Quality Badges](#-pipeline--quality-badges)
+2. [Key Features & Architecture](#-key-features--architecture)
+3. [Domain Model (UML)](#-domain-model-uml)
+4. [CI/CD Workflow Architecture](#-cicd-workflow-architecture)
+5. [🛠️ Local Development & Quick Start](#%EF%B8%8F-local-development--quick-start)
+6. [🐳 Docker Compose Containers](#-docker-compose-containers)
+7. [🎯 Testing & Verification](#-testing-&--verification)
+8. [🔗 API Documentation & Useful Links](#-api-documentation--useful-links)
+9. [🖼️ Application Preview](#%EF%B8%8F-application-preview)
 
 ---
 
