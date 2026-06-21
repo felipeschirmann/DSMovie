@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Backend: Run App" type="MavenRunConfiguration" factoryName="Maven" folderName="Backend/Dev">
+  <configuration default="false" name="Run Tests" type="MavenRunConfiguration" factoryName="Maven">
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings" />
@@ -12,11 +12,12 @@
           <option name="activatedProfiles" />
           <option name="goals">
             <list>
-              <option value="spring-boot:run" />
+              <option value="clean" />
+              <option value="verify" />
             </list>
           </option>
-          <option name="pomFileName" value="backend/pom.xml" />
-          <option name="workingDirPath" value="$PROJECT_DIR$/backend" />
+          <option name="pomFileName" value="pom.xml" />
+          <option name="workingDirPath" value="$PROJECT_DIR$" />
         </MavenRunnerParameters>
       </option>
     </MavenSettings>
